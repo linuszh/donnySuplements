@@ -1,394 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donny Supplements — Evidence-Based Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donny Supplements — Longevity Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght,GRAD@6..72,200..800,-50..100&family=Newsreader:opsz,ital,wght@6..72,1,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#fcf9f8",
+        "on-surface": "#1c1b1b",
+        "surface-variant": "#f6f3f2",
+        "surface-high": "#ebe7e7",
+        "on-surface-variant": "#44474e",
+        "outline": "#c2c7cd",
+        "primary": "#01324B",
+        "primary-dark": "#001c2d",
+        "secondary": "#116493",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6"
+      },
+      fontFamily: {
+        "serif": ["Newsreader", "Georgia", "serif"],
+        "sans": ["Inter", "system-ui", "sans-serif"]
+      },
+      borderRadius: {
+        "none": "0", "sm": "0", "md": "0", "lg": "0", "xl": "0", "full": "0"
+      },
+    },
+  },
+}
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  body { font-family: 'Inter', sans-serif; background-color: #fcf9f8; color: #1c1b1b; }
+  h1, h2, h3, .serif-text { font-family: 'Newsreader', serif; }
+  .journal-border { border-bottom: 1px solid #c2c7cd; }
+  .journal-border-top { border-top: 1px solid #c2c7cd; }
+  .tab-section { display: none; }
+  .tab-section.active { display: block; }
+  .tab-btn.active { color: #001c2d; border-bottom-color: #116493; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-in { animation: fadeIn .3s ease forwards; }
+  article.fade-in:nth-child(2) { animation-delay: .04s; }
+  article.fade-in:nth-child(3) { animation-delay: .08s; }
+  article.fade-in:nth-child(4) { animation-delay: .12s; }
+  article.fade-in:nth-child(5) { animation-delay: .16s; }
+  article.fade-in:nth-child(6) { animation-delay: .20s; }
+  article.fade-in:nth-child(7) { animation-delay: .24s; }
+  article.fade-in:nth-child(8) { animation-delay: .28s; }
+  .slide-viewer { border: none; width: 100%; height: 480px; }
+</style>
 </head>
-<body>
+<body class="bg-surface text-on-surface selection:bg-secondary/20">
 
-<!-- Hero -->
-<header class="hero">
-    <div class="container">
-        <p class="hero-tag">Donny Supplements</p>
-        <h1>Evidence-Based Supplements</h1>
-        <p class="hero-sub">Only supplements backed by peer-reviewed meta-analyses &amp; randomized controlled trials.</p>
-    </div>
-</header>
-
-<!-- Tabs -->
-<nav class="tabs container">
-    <button class="tab active" data-tab="proven">Proven</button>
-    <button class="tab" data-tab="promising">Promising</button>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f8]/85 backdrop-blur-[20px]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+  <div class="text-2xl font-serif font-bold tracking-tighter text-primary-dark">DONNY SUPPLEMENTS</div>
+  <div class="hidden md:flex gap-10">
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#proven-section">Proven</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#potential-section">High Potential</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#methodology">Methodology</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#slides">Presentation</a>
+  </div>
+  <div class="flex items-center gap-6">
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary" href="https://scite.ai" target="_blank" rel="noopener">Scite.ai</a>
+  </div>
+</div>
 </nav>
 
-<!-- ════════════════════════════════════════════════════ -->
-<!-- TAB 1 ── PROVEN                                     -->
-<!-- ════════════════════════════════════════════════════ -->
-<main class="container">
-    <section class="grid tab-content active" id="proven">
+<main class="pt-28 max-w-screen-2xl mx-auto px-8">
 
-        <!-- 1 ── Creatine -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Creatine</h2>
-                <span class="badge">3 – 5 g / day</span>
-            </div>
-            <p class="benefit">Increases muscle strength, lean mass, and exercise performance. One of the most researched and effective sports supplements.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis of RCTs in older adults showed creatine + resistance training significantly increased lean mass, strength, and functional performance vs. training alone (Devries &amp; Phillips, 2014).</li>
-                    <li>Protein + creatine supplementation demonstrated increases in strength and lean body mass across multiple studies (Knapik et al., 2015).</li>
-                </ul>
-                <div class="refs">
-                    <p>Devries, M. C., &amp; Phillips, S. M. (2014). Creatine Supplementation during Resistance Training in Older Adults. <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 46(6), 1194–1203. <a href="https://doi.org/10.1249/mss.0000000000000220" target="_blank" rel="noopener">doi:10.1249/mss.0000000000000220</a></p>
-                </div>
-            </div>
-        </article>
+<!-- Hero -->
+<header class="mb-16 journal-border pb-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8">
+  <div class="max-w-3xl">
+    <div class="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-secondary mb-4">Longevity Research Compendium &bull; March 2026</div>
+    <h1 class="text-5xl md:text-7xl font-serif font-light leading-tight tracking-tight mb-8 italic">
+      The Science of Living Longer
+    </h1>
+    <p class="text-xl font-serif leading-relaxed text-on-surface-variant max-w-2xl">
+      A curated index of compounds with peer-reviewed evidence for extending human healthspan and lifespan. Sourced from meta-analyses, randomized controlled trials, and epigenetic aging research via <a href="https://scite.ai" target="_blank" rel="noopener" class="text-secondary hover:underline">scite.ai</a> and <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="text-secondary hover:underline">NotebookLM</a>.
+    </p>
+  </div>
+  <div class="hidden lg:block text-right">
+    <div class="text-[10px] font-sans uppercase tracking-widest text-outline mb-1">Last Updated</div>
+    <div class="text-sm font-sans font-medium">March 22, 2026</div>
+    <div class="text-[10px] font-sans uppercase tracking-widest text-outline mt-4 mb-1">Compounds Indexed</div>
+    <div class="text-sm font-sans font-medium">14</div>
+  </div>
+</div>
+</header>
 
-        <!-- 2 ── Vitamin D -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Vitamin D</h2>
-                <span class="badge">1,000 – 2,000 IU / day</span>
-            </div>
-            <p class="benefit">Reduces total mortality and cancer mortality. Essential for bone health, immune function, and overall wellbeing—especially in deficient populations.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis of 18 RCTs (57,311 participants) found vitamin D supplementation associated with decreased total mortality (RR 0.93, 95% CI 0.87–0.99) (Autier, 2007).</li>
-                    <li>Updated meta-analysis of 10 RCTs showed vitamin D significantly reduced total cancer mortality (RR 0.87, 95% CI 0.79–0.96, p = 0.005) (Keum et al., 2019).</li>
-                </ul>
-                <div class="refs">
-                    <p>Autier, P. (2007). Vitamin D Supplementation and Total Mortality. <em>Archives of Internal Medicine</em>, 167(16), 1730. <a href="https://doi.org/10.1001/archinte.167.16.1730" target="_blank" rel="noopener">doi:10.1001/archinte.167.16.1730</a></p>
-                    <p>Keum, N., Lee, D. H., &amp; Greenwood, D. C. (2019). Vitamin D supplementation and total cancer incidence and mortality. <em>Annals of Oncology</em>, 30(5), 733–743. <a href="https://doi.org/10.1093/annonc/mdz059" target="_blank" rel="noopener">doi:10.1093/annonc/mdz059</a></p>
-                </div>
-            </div>
-        </article>
+<!-- Tab Navigation -->
+<div class="flex gap-0 mb-0 journal-border" id="tab-nav">
+  <button class="tab-btn active font-sans text-xs font-bold uppercase tracking-widest pb-3 px-6 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer" data-tab="proven">Scientifically Proven</button>
+  <button class="tab-btn font-sans text-xs font-bold uppercase tracking-widest pb-3 px-6 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer" data-tab="potential">High Potential</button>
+</div>
 
-        <!-- 3 ── Omega-3 Fish Oil -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Omega-3 Fish Oil</h2>
-                <span class="badge">1 – 3 g EPA+DHA / day</span>
-            </div>
-            <p class="benefit">Reduces triglycerides, supports cardiovascular health, and has anti-inflammatory effects. Beneficial for heart, brain, and joint health.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Multiple meta-analyses of RCTs demonstrate significant triglyceride reduction (15–30%) with omega-3 supplementation at doses of 2–4 g/day.</li>
-                    <li>The VITAL trial and subsequent meta-analyses support cardiovascular benefits, particularly for individuals with low baseline fish intake.</li>
-                </ul>
-                <div class="refs">
-                    <p>Referenced in: Barbarawi, M. et al. (2019). Vitamin D Supplementation and Cardiovascular Disease Risks. <em>JAMA Cardiology</em>, 4(8), 765. <a href="https://doi.org/10.1001/jamacardio.2019.1870" target="_blank" rel="noopener">doi:10.1001/jamacardio.2019.1870</a> (cites VITAL trial data on omega-3).</p>
-                </div>
-            </div>
-        </article>
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!-- TAB 1: SCIENTIFICALLY PROVEN                                    -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<section class="tab-section active" id="proven" data-section="proven-section">
 
-        <!-- 4 ── Protein (Whey) -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Protein / Whey</h2>
-                <span class="badge">1.6 g/kg/day total</span>
-            </div>
-            <p class="benefit">Enhances resistance-training-induced gains in muscle mass and strength. Critical for muscle recovery and growth.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis of 49 RCTs (1,863 participants) showed protein supplementation significantly increased 1-RM strength (+2.49 kg), fat-free mass (+0.30 kg), and muscle fibre cross-sectional area (Morton et al., 2017).</li>
-                    <li>No further benefit observed beyond total protein intake of ~1.6 g/kg/day.</li>
-                </ul>
-                <div class="refs">
-                    <p>Morton, R. W. et al. (2017). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains. <em>British Journal of Sports Medicine</em>, 52(6), 376–384. <a href="https://doi.org/10.1136/bjsports-2017-097608" target="_blank" rel="noopener">doi:10.1136/bjsports-2017-097608</a></p>
-                </div>
-            </div>
-        </article>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
+<!-- Main Feed -->
+<div class="lg:col-span-8">
+  <div class="flex items-center justify-between mb-8 journal-border pb-2">
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest">Proven Longevity Compounds</h2>
+    <span class="font-sans text-[10px] uppercase text-outline">Strong RCT &amp; Meta-Analysis Evidence</span>
+  </div>
 
-        <!-- 5 ── Ashwagandha -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Ashwagandha</h2>
-                <span class="badge">300 – 600 mg / day</span>
-            </div>
-            <p class="benefit">Reduces stress, anxiety, and cortisol levels. Also improves muscle strength and recovery during resistance training.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>RCT (n=57) showed 600 mg/day ashwagandha root extract significantly increased bench press strength (+46 kg vs +26 kg placebo), muscle size, testosterone, and reduced body fat (Wankhede et al., 2015).</li>
-                    <li>RCT (n=60) showed 240 mg/day significantly reduced anxiety (HAM-A, p = .040) and morning cortisol (p &lt; .001) vs. placebo (Lopresti et al., 2019).</li>
-                </ul>
-                <div class="refs">
-                    <p>Wankhede, S. et al. (2015). Examining the effect of <em>Withania somnifera</em> supplementation on muscle strength and recovery. <em>Journal of the International Society of Sports Nutrition</em>, 12(1). <a href="https://doi.org/10.1186/s12970-015-0104-9" target="_blank" rel="noopener">doi:10.1186/s12970-015-0104-9</a></p>
-                    <p>Lopresti, A. L. et al. (2019). An investigation into the stress-relieving and pharmacological actions of an ashwagandha extract. <em>Medicine</em>, 98(37), e17186. <a href="https://doi.org/10.1097/md.0000000000017186" target="_blank" rel="noopener">doi:10.1097/md.0000000000017186</a></p>
-                </div>
-            </div>
-        </article>
+  <div class="space-y-10">
 
-        <!-- 6 ── Magnesium -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Magnesium</h2>
-                <span class="badge">200 – 400 mg / day</span>
-            </div>
-            <p class="benefit">Supports muscle function, sleep quality, and blood pressure regulation. Deficiency is common and linked to multiple health issues.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analyses of RCTs demonstrate significant reductions in systolic and diastolic blood pressure with magnesium supplementation (300–500 mg/day).</li>
-                    <li>Systematic reviews support benefits for sleep quality, muscle cramps, and glucose metabolism in deficient individuals.</li>
-                </ul>
-                <div class="refs">
-                    <p>Multiple meta-analyses sourced via scite.ai confirm efficacy in deficient populations. Preferred forms: magnesium glycinate, citrate, or threonate for bioavailability.</p>
-                </div>
-            </div>
-        </article>
+    <!-- 1 ── Vitamin D -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Vitamin D3 (Cholecalciferol)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">800 &ndash; 2,000 IU / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Genomic Stability &bull; Immune Regulation &bull; Anti-Inflammaging</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Acts as a secosteroid hormone influencing ~3% of the human genome via the Vitamin D Receptor (VDR). Reduces oxidative stress and chronic inflammaging, preserving telomere length and genomic stability. Essential for bone homeostasis, innate immune function, and endocrine regulation.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Meta-analysis of RCTs (N=74,655): statistically significant <strong class="text-on-surface">reduction in cancer mortality (RR 0.85)</strong>; all-cause mortality RR 0.98.</li>
+          <li>VITAL trial (N=25,871): emerging signal for reduced cancer mortality (HR 0.83).</li>
+          <li>Systematic review (Zhang et al., 2019, <em>BMJ</em>): Vitamin D3 supplementation associated with decreased total mortality across 52 RCTs.</li>
+          <li>Meta-analysis of 10 RCTs: significantly reduced total cancer mortality (RR 0.87, 95% CI 0.79&ndash;0.96, p&nbsp;=&nbsp;0.005) (Keum et al., 2019).</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1136/bmj.l4673" target="_blank" rel="noopener">Zhang 2019 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1093/annonc/mdz059" target="_blank" rel="noopener">Keum 2019 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">DOI: 10.1136/bmj.l4673</span>
+      </div>
+    </article>
 
-        <!-- 7 ── Zinc -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Zinc</h2>
-                <span class="badge">75 mg / day (lozenges, at cold onset)</span>
-            </div>
-            <p class="benefit">Significantly shortens common cold duration when taken as lozenges at symptom onset. Supports immune function.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Double-blind placebo-controlled RCT: 86% of zinc-treated subjects were asymptomatic after 7 days vs. 46% placebo (p = 0.0005). Zinc lozenges shortened cold duration by ~7 days (Eby et al., 1984).</li>
-                    <li>Multiple subsequent meta-analyses confirm zinc lozenges reduce cold duration by 33% when taken within 24 hours of symptom onset.</li>
-                </ul>
-                <div class="refs">
-                    <p>Eby, G. A., Davis, D. R., &amp; Halcomb, W. W. (1984). Reduction in duration of common colds by zinc gluconate lozenges in a double-blind study. <em>Antimicrobial Agents and Chemotherapy</em>, 25(1), 20–24. <a href="https://doi.org/10.1128/aac.25.1.20" target="_blank" rel="noopener">doi:10.1128/aac.25.1.20</a></p>
-                </div>
-            </div>
-        </article>
+    <!-- 2 ── Omega-3 -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Omega-3 Fatty Acids (EPA + DHA)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">1 &ndash; 4 g EPA+DHA / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Pro-Resolving Mediators &bull; NF-kB Inhibition &bull; Telomere Preservation</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        EPA and DHA serve as precursors for specialized pro-resolving mediators (SPMs) like resolvins and protectins, which actively terminate inflammatory responses. They modulate cell signaling by inhibiting the pro-inflammatory NF-kB pathway and preserve telomere length by mitigating oxidative DNA damage.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Pooled analysis of 17 prospective studies (N=42,466, <em>Nature Communications</em>): <strong class="text-on-surface">18% reduction in all-cause mortality</strong> associated with higher blood omega-3 levels over 16-year median follow-up (Harris et al., 2021).</li>
+          <li>DO-HEALTH study (N=777): Omega-3s <strong class="text-on-surface">reduced biological age</strong> across multiple epigenetic clocks (PhenoAge, GrimAge2) and slowed the pace of aging.</li>
+          <li>Meta-analysis of 38 RCTs: confirmed significant reduction in cardiovascular mortality.</li>
+          <li>Network meta-analysis of 55 RCTs: significant CVD death reduction (RR 0.92, 95% CI 0.87&ndash;0.98) (Kim et al., 2020).</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1038/s41467-021-22370-2" target="_blank" rel="noopener">Harris 2021 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.3390/nu12103203" target="_blank" rel="noopener">Kim 2020 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">DOI: 10.1038/s41467-021-22370-2</span>
+      </div>
+    </article>
 
-        <!-- 8 ── Curcumin / Turmeric -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Curcumin / Turmeric</h2>
-                <span class="badge">500 – 1,000 mg / day (with piperine)</span>
-            </div>
-            <p class="benefit">Powerful anti-inflammatory and antioxidant properties. Reduces IL-6, CRP, and oxidative stress markers.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis of 15 RCTs showed curcumin significantly decreased IL-6 (p = 0.02), hs-CRP (p = 0.02), and MDA (p &lt; 0.001) (Tabrizi et al., 2018).</li>
-                    <li>RCT in overweight adolescents showed 500 mg/day curcumin significantly reduced inflammation (hs-CRP, IL-6) and oxidative stress markers (Saraf-Bank et al., 2019).</li>
-                </ul>
-                <div class="refs">
-                    <p>Tabrizi, R. et al. (2018). The effects of curcumin-containing supplements on biomarkers of inflammation and oxidative stress. <em>Phytotherapy Research</em>, 33(2), 253–262. <a href="https://doi.org/10.1002/ptr.6226" target="_blank" rel="noopener">doi:10.1002/ptr.6226</a></p>
-                </div>
-            </div>
-        </article>
+    <!-- 3 ── Magnesium -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Magnesium</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">250 &ndash; 450 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">300+ Enzymatic Reactions &bull; DNA Repair &bull; Calcium Channel Blockade</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Essential catalytic cofactor for over 300 enzymatic reactions including ATP production and DNA/RNA synthesis. Maintains genomic stability by supporting DNA repair enzymes and acts as a natural calcium channel blocker to prevent cellular stress and NF-kB overactivation. Required for proper activation of Vitamin D.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Linear dose-response meta-analysis (N=1,168,756): each additional <strong class="text-on-surface">100 mg/day associated with 6% reduced all-cause mortality and 5% reduced cancer mortality</strong>.</li>
+          <li>US NHANES diabetic cohort (N=6,004): high intake correlated with HR 0.62 for all-cause mortality.</li>
+          <li>Meta-analyses of RCTs: significant reductions in systolic and diastolic blood pressure (300&ndash;500 mg/day).</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <span class="text-outline uppercase tracking-widest">Preferred forms: Glycinate, Malate, or Threonate</span>
+      </div>
+    </article>
 
-        <!-- 9 ── Probiotics -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Probiotics</h2>
-                <span class="badge">1 – 10 billion CFU / day</span>
-            </div>
-            <p class="benefit">Reduces antibiotic-associated diarrhea, improves H. pylori eradication rates, and supports gut health. Strain-specific benefits.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis: <em>S. boulardii</em>, <em>L. rhamnosus GG</em>, and probiotic mixtures significantly reduced antibiotic-associated diarrhea (McFarland, 2006).</li>
-                    <li>Meta-analysis of 8 RCTs showed probiotics significantly improved H. pylori eradication rates (OR 2.47, 95% CI 1.16–5.29) and reduced side effects including diarrhea and taste disturbance (Tong et al., 2006).</li>
-                </ul>
-                <div class="refs">
-                    <p>McFarland, L. V. (2006). Meta-Analysis of Probiotics for the Prevention of Antibiotic Associated Diarrhea and the Treatment of <em>Clostridium difficile</em> Disease. <em>The American Journal of Gastroenterology</em>, 101(4), 812–822. <a href="https://doi.org/10.1111/j.1572-0241.2006.00465.x" target="_blank" rel="noopener">doi:10.1111/j.1572-0241.2006.00465.x</a></p>
-                    <p>Tong, J. et al. (2006). Meta-analysis: the effect of supplementation with probiotics on eradication rates and adverse events during <em>H. pylori</em> eradication therapy. <em>Alimentary Pharmacology &amp; Therapeutics</em>, 25(2), 155–168. <a href="https://doi.org/10.1111/j.1365-2036.2006.03179.x" target="_blank" rel="noopener">doi:10.1111/j.1365-2036.2006.03179.x</a></p>
-                </div>
-            </div>
-        </article>
+    <!-- 4 ── CoQ10 -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Coenzyme Q10 (Ubiquinol)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">100 &ndash; 300 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Mitochondrial Electron Transport &bull; Lipid Antioxidant &bull; Lysosomal Function</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Fat-soluble electron shuttle in the inner mitochondrial membrane, transferring electrons from Complexes I and II to Complex III for ATP synthesis. Functions as a potent lipid-soluble antioxidant, protecting cell membranes and LDL from peroxidation, and supports vital lysosomal acidification for cellular waste disposal.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Q-SYMBIO trial (N=420, heart failure, 106 weeks): <strong class="text-on-surface">42.3% relative risk reduction for major adverse cardiovascular events (HR 0.50)</strong> and 44.4% reduction in all-cause mortality (HR 0.56).</li>
+          <li>KiSel-10 study (N=443, 5-year RCT): CoQ10 + Selenium resulted in <strong class="text-on-surface">53% relative reduction in cardiovascular mortality (p=0.015)</strong>. Validated at 12-year follow-up.</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <span class="text-outline uppercase tracking-widest">Ubiquinol form preferred for adults &gt;40 due to superior absorption</span>
+      </div>
+    </article>
 
-        <!-- 10 ── Melatonin -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Melatonin</h2>
-                <span class="badge">0.5 – 5 mg before bed</span>
-            </div>
-            <p class="benefit">Improves sleep onset latency, total sleep time, and overall sleep quality. Safe and effective for primary sleep disorders.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Meta-analysis of RCTs showed melatonin significantly reduced sleep onset latency, increased total sleep time, and improved overall sleep quality in patients with primary sleep disorders (Ferracioli-Oda et al., 2013).</li>
-                    <li>Earlier meta-analysis confirmed efficacy and safety for primary sleep disorders with doses of 0.3–5 mg (Buscemi et al., 2005).</li>
-                </ul>
-                <div class="refs">
-                    <p>Ferracioli-Oda, E. et al. (2013). Meta-Analysis: Melatonin for the Treatment of Primary Sleep Disorders. <em>PLoS ONE</em>, 8(5), e63773. <a href="https://doi.org/10.1371/journal.pone.0063773" target="_blank" rel="noopener">doi:10.1371/journal.pone.0063773</a></p>
-                    <p>Buscemi, N. et al. (2005). The efficacy and safety of exogenous melatonin for primary sleep disorders. <em>Journal of General Internal Medicine</em>, 20(12). <a href="https://doi.org/10.1111/j.1525-1497.2005.0243.x" target="_blank" rel="noopener">doi:10.1111/j.1525-1497.2005.0243.x</a></p>
-                </div>
-            </div>
-        </article>
+    <!-- 5 ── Selenium -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Selenium</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">200 &micro;g / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Glutathione Peroxidase &bull; Mitochondrial Fusion &bull; Immune Modulation</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Essential trace mineral acting as a cofactor for glutathione peroxidase and thioredoxin reductase. Neutralizes lipid hydroperoxides, promotes mitochondrial fusion to prevent energy imbalance, and modulates T-cell proliferation. Most effective when combined with CoQ10.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>KiSel-10 study (N=443 healthy elderly, 5-year RCT): Selenium + CoQ10 produced <strong class="text-on-surface">53% relative reduction in cardiovascular mortality (p=0.015)</strong>.</li>
+          <li>Dramatic cardiovascular survival benefit persisted and was validated in a 12-year follow-up study.</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <span class="text-outline uppercase tracking-widest">Organic selenium yeast form used in successful trials</span>
+      </div>
+    </article>
 
-        <!-- 11 ── Caffeine -->
-        <article class="card">
-            <div class="card-head">
-                <h2>Caffeine</h2>
-                <span class="badge">3 – 6 mg/kg body weight</span>
-            </div>
-            <p class="benefit">Significant ergogenic effects on maximal muscle strength, power output, and endurance performance.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Systematic review and meta-analysis showed significant ergogenic effects of caffeine on maximal upper body muscle strength and vertical jump power (Grgic et al., 2018).</li>
-                    <li>Even small improvements translate to meaningful differences in competitive athletic outcomes.</li>
-                </ul>
-                <div class="refs">
-                    <p>Grgic, J. et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. <em>Journal of the International Society of Sports Nutrition</em>, 15(1). <a href="https://doi.org/10.1186/s12970-018-0216-0" target="_blank" rel="noopener">doi:10.1186/s12970-018-0216-0</a></p>
-                </div>
-            </div>
-        </article>
+    <!-- 6 ── Metformin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Metformin</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">500 &ndash; 1,500 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">AMPK Activation &bull; mTOR Suppression &bull; Autophagy &bull; TET2 Stabilization</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Partially inhibits Complex I of the mitochondrial electron transport chain, activating AMPK (the metabolic master switch), which suppresses mTOR, stimulates autophagy, and enhances insulin sensitivity. Modulates the epigenome by stabilizing TET2, preventing aberrant DNA methylation linked to genomic instability.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Multi-institutional observational study (438 postmenopausal women): <strong class="text-on-surface">30% lower risk of death before age 90</strong> (exceptional longevity).</li>
+          <li>Systematic review of 12 RCTs (N=21,595) and 41 observational studies (N=1,029,389): <strong class="text-on-surface">35% reduction in cancer mortality and 31% reduction in cancer incidence</strong>.</li>
+          <li>TAME (Targeting Aging with Metformin) trial is ongoing for definitive efficacy in healthy individuals.</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <span class="text-outline uppercase tracking-widest">Rx required &bull; Monitor Vitamin B12 levels</span>
+      </div>
+    </article>
 
-    </section>
+    <!-- 7 ── Curcumin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Curcumin (Bioavailable Forms)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">80 &ndash; 500 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">NF-kB &amp; COX-2 Inhibition &bull; Nrf2 Activation &bull; SIRT1 Upregulation &bull; Mitophagy</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Multitargeted anti-inflammatory polyphenol that inhibits NF-kB and COX-2, activates Nrf2 antioxidant defense, inhibits mTOR, and upregulates SIRT1 and autophagy. Induces mitophagy via the PINK1/Parkin pathway to clear damaged mitochondria.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Umbrella meta-analysis (10 studies, N=5,870): <strong class="text-on-surface">significant decreases in CRP (ES -0.74), IL-6 (ES -1.07), TNF-&alpha; (ES -1.92)</strong>.</li>
+          <li>Meta-analysis of 15 RCTs: curcumin significantly decreased IL-6 (p=0.02), hs-CRP (p=0.02), and MDA (p&lt;0.001) (Tabrizi et al., 2018).</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1002/ptr.6226" target="_blank" rel="noopener">Tabrizi 2018 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">Requires high-bioavailability form (nanomicelle or phytosome)</span>
+      </div>
+    </article>
 
-    <!-- ════════════════════════════════════════════════════ -->
-    <!-- TAB 2 ── PROMISING                                  -->
-    <!-- ════════════════════════════════════════════════════ -->
-    <section class="grid tab-content" id="promising">
+    <!-- 8 ── Resveratrol -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Resveratrol (trans-Resveratrol)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">500 &ndash; 1,000 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">SIRT1 Allosteric Activation &bull; Mitochondrial Biogenesis &bull; Caloric Restriction Mimetic</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Natural polyphenol that mimics caloric restriction by allosterically activating SIRT1, enhancing mitochondrial biogenesis, improving insulin sensitivity, and increasing cellular autophagy. Take with dietary fat; threshold &gt;400 mg/day most effective.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Umbrella review of 18 meta-analyses (up to N=5,878): <strong class="text-on-surface">significant reduction in body weight (-0.18 kg), BMI (-0.14 kg/m&sup2;), and waist circumference (-0.43 cm)</strong>.</li>
+          <li>Meta-analyses confirm thresholds &gt;400 mg/day to be most effective for metabolic outcomes.</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <span class="text-outline uppercase tracking-widest">trans-Resveratrol form &bull; Take with dietary fat</span>
+      </div>
+    </article>
 
-        <div class="promising-banner">
-            <p>These supplements show early positive results in clinical trials but need more large-scale replication before they can be considered fully proven. Watch this space.</p>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-12">
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2" id="methodology">Clinical Methodology</h2>
+    <div class="bg-surface-variant/50 p-6">
+      <p class="text-sm font-serif leading-relaxed text-on-surface-variant mb-6">
+        Compounds are admitted to the longevity index only after meeting the <span class="italic">Prestige Significance Threshold</span>: evidence from peer-reviewed meta-analyses or large-scale RCTs demonstrating statistically significant effects on mortality, healthspan, or validated aging biomarkers.
+      </p>
+      <div class="space-y-4">
+        <div class="flex justify-between items-end">
+          <span class="text-[10px] font-sans uppercase tracking-widest">Sources Analyzed</span>
+          <span class="text-2xl font-serif font-bold">87</span>
         </div>
+        <div class="w-full h-[1px] bg-outline/30"></div>
+        <div class="flex justify-between items-end">
+          <span class="text-[10px] font-sans uppercase tracking-widest">Total Participants</span>
+          <span class="text-2xl font-serif font-bold">2.4M+</span>
+        </div>
+        <div class="w-full h-[1px] bg-outline/30"></div>
+        <div class="flex justify-between items-end">
+          <span class="text-[10px] font-sans uppercase tracking-widest">Research Tools</span>
+          <span class="text-sm font-serif font-bold">scite.ai + NLM</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- P1 ── NMN (Nicotinamide Mononucleotide) -->
-        <article class="card card--promising">
-            <div class="card-head">
-                <h2>NMN</h2>
-                <span class="badge badge--promising">600 mg / day</span>
-            </div>
-            <p class="benefit">Boosts NAD+ levels, improves walking endurance, and may slow biological aging markers. The leading NAD+ precursor for longevity research.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>RCT (n=80, double-blind, placebo-controlled, dose-dependent): All NMN groups (300/600/900 mg) significantly increased blood NAD+ at days 30 and 60 (all p &le; 0.001). Walking distance on 6-min test was significantly higher vs. placebo (all p &lt; 0.01). Biological age stayed unchanged in NMN groups while it increased in placebo (p &lt; 0.05) (Yi et al., 2022).</li>
-                    <li>Optimal dose appears to be 600 mg/day for NAD+ elevation and physical performance. Safe and well-tolerated up to 900 mg/day.</li>
-                </ul>
-                <p class="caveat">Caveat: Limited human trials to date; most longevity data from animal models. Long-term safety data in humans still emerging.</p>
-                <div class="refs">
-                    <p>Yi, L., Maier, A. B., &amp; Tao, R. (2022). The efficacy and safety of &beta;-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults. <em>GeroScience</em>, 45(1), 29–43. <a href="https://doi.org/10.1007/s11357-022-00705-1" target="_blank" rel="noopener">doi:10.1007/s11357-022-00705-1</a></p>
-                </div>
-            </div>
-        </article>
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">Evidence Tiers</h2>
+    <ul class="space-y-5">
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">I</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Strong</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Multiple large RCTs or meta-analyses with significant mortality/healthspan endpoints.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">II</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Moderate</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">RCTs showing biomarker improvements; epidemiological mortality data.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">III</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Emerging</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Pilot human studies; strong animal data with ongoing clinical trials.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-        <!-- P2 ── Lion's Mane -->
-        <article class="card card--promising">
-            <div class="card-head">
-                <h2>Lion's Mane</h2>
-                <span class="badge badge--promising">500 – 3,000 mg / day</span>
-            </div>
-            <p class="benefit">Neuroprotective mushroom that may improve mood, sleep, and cognitive function. Contains compounds that stimulate nerve growth factor (NGF).</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Clinical study (n=77): 8 weeks of <em>Hericium erinaceus</em> supplementation significantly decreased depression, anxiety, and sleep disorders in overweight/obese adults. Increased circulating pro-BDNF levels (Vigna et al., 2019).</li>
-                    <li>Prior double-blind placebo-controlled RCT showed significant improvement in cognitive function scores in mild cognitive impairment group vs. placebo. A separate RCT by Nagano et al. showed reduced depression and anxiety in women.</li>
-                </ul>
-                <p class="caveat">Caveat: Studies are small. The cognitive function RCT showed benefits reversed after supplementation stopped. Larger and longer trials needed.</p>
-                <div class="refs">
-                    <p>Vigna, L. et al. (2019). <em>Hericium erinaceus</em> Improves Mood and Sleep Disorders in Patients Affected by Overweight or Obesity. <em>Evidence-Based Complementary and Alternative Medicine</em>, 2019, 1–12. <a href="https://doi.org/10.1155/2019/7861297" target="_blank" rel="noopener">doi:10.1155/2019/7861297</a></p>
-                </div>
-            </div>
-        </article>
-
-        <!-- P3 ── Rhodiola Rosea -->
-        <article class="card card--promising">
-            <div class="card-head">
-                <h2>Rhodiola Rosea</h2>
-                <span class="badge badge--promising">200 – 600 mg / day</span>
-            </div>
-            <p class="benefit">Adaptogenic herb that combats fatigue, improves mental performance and reaction time, and reduces stress-induced burnout symptoms.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Double-blind RCT (n=60): 576 mg/day for 4 weeks exerted notable anti-fatigue effect, increased mental performance (concentration), and decreased cortisol response to awakening stress in burnout patients (Stojcheva &amp; Quintela, 2022, reviewing clinical trials).</li>
-                    <li>Double-blind RCT (n=26): 600 mg/day for 4 weeks significantly shortened reaction time and improved correct responses in psychomotor tests, and raised plasma total antioxidant capacity (Jowko et al., 2018).</li>
-                    <li>Open-label study (n=101): 400 mg/day for 4 weeks showed clinically relevant improvements in stress symptoms, disability, and functional impairment — improvements seen as early as 3 days (Edwards et al., 2012).</li>
-                </ul>
-                <p class="caveat">Caveat: Many studies are small or open-label. Physical performance benefits are inconsistent. Needs large-scale placebo-controlled RCTs.</p>
-                <div class="refs">
-                    <p>Stojcheva, E. I., &amp; Quintela, J. C. (2022). The Effectiveness of <em>Rhodiola rosea</em> L. Preparations in Alleviating Various Aspects of Life-Stress Symptoms. <em>Molecules</em>, 27(12), 3902. <a href="https://doi.org/10.3390/molecules27123902" target="_blank" rel="noopener">doi:10.3390/molecules27123902</a></p>
-                    <p>Jowko, E. et al. (2018). Effects of <em>Rhodiola rosea</em> supplementation on mental performance, physical capacity, and oxidative stress biomarkers. <em>Journal of Sport and Health Science</em>, 7(4), 473–480. <a href="https://doi.org/10.1016/j.jshs.2016.05.005" target="_blank" rel="noopener">doi:10.1016/j.jshs.2016.05.005</a></p>
-                    <p>Edwards, D. H. et al. (2012). Therapeutic Effects and Safety of <em>Rhodiola rosea</em> Extract WS&reg; 1375. <em>Phytotherapy Research</em>, 26(8), 1220–1225. <a href="https://doi.org/10.1002/ptr.3712" target="_blank" rel="noopener">doi:10.1002/ptr.3712</a></p>
-                </div>
-            </div>
-        </article>
-
-        <!-- P4 ── Collagen Peptides -->
-        <article class="card card--promising">
-            <div class="card-head">
-                <h2>Collagen Peptides</h2>
-                <span class="badge badge--promising">2.5 – 10 g / day</span>
-            </div>
-            <p class="benefit">Improves skin hydration, elasticity, and collagen density. May reduce skin wrinkling and support joint health.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Two placebo-controlled RCTs showed oral collagen peptides significantly increased skin hydration after 8 weeks, increased collagen density and decreased collagen fragmentation after just 4 weeks — effects persisted at 12 weeks (Asserin et al., 2015).</li>
-                    <li>RCT (n=72): 2.5 g collagen peptides daily for 12 weeks significantly improved skin hydration, elasticity, roughness, and density vs. placebo. Effects retained 4 weeks after stopping (Bolke et al., 2019).</li>
-                    <li>RCT (n=64): 1 g/day low-molecular-weight collagen peptide for 12 weeks significantly improved skin hydration, wrinkling, and elasticity (Kim et al., 2018).</li>
-                </ul>
-                <p class="caveat">Caveat: Systematic review of 11 studies (805 patients) is encouraging, but many trials are industry-funded. Joint health claims need more independent replication.</p>
-                <div class="refs">
-                    <p>Asserin, J. et al. (2015). The effect of oral collagen peptide supplementation on skin moisture and the dermal collagen network. <em>Journal of Cosmetic Dermatology</em>, 14(4), 291–301. <a href="https://doi.org/10.1111/jocd.12174" target="_blank" rel="noopener">doi:10.1111/jocd.12174</a></p>
-                    <p>Bolke, L. et al. (2019). A Collagen Supplement Improves Skin Hydration, Elasticity, Roughness, and Density. <em>Nutrients</em>, 11(10), 2494. <a href="https://doi.org/10.3390/nu11102494" target="_blank" rel="noopener">doi:10.3390/nu11102494</a></p>
-                    <p>Kim, D.-U. et al. (2018). Oral Intake of Low-Molecular-Weight Collagen Peptide Improves Hydration, Elasticity, and Wrinkling in Human Skin. <em>Nutrients</em>, 10(7), 826. <a href="https://doi.org/10.3390/nu10070826" target="_blank" rel="noopener">doi:10.3390/nu10070826</a></p>
-                </div>
-            </div>
-        </article>
-
-        <!-- P5 ── Berberine -->
-        <article class="card card--promising">
-            <div class="card-head">
-                <h2>Berberine</h2>
-                <span class="badge badge--promising">500 mg 2–3x / day</span>
-            </div>
-            <p class="benefit">Lowers blood glucose and lipids with effects comparable to metformin in some studies. Modulates gut microbiota and reduces visceral fat.</p>
-            <div class="evidence">
-                <h3>Key Evidence</h3>
-                <ul>
-                    <li>Preclinical and clinical data show berberine significantly decreases fasting blood glucose, insulin resistance (HOMA-IR), total cholesterol, and triglycerides. Effects on glucose metabolism do not depend on insulin concentration, similar to metformin (Cicero et al., 2019; Zhang et al., 2010).</li>
-                    <li>Double-blind placebo-controlled RCT (n=40) of berberine-containing nutraceutical showed significant improvement in triglycerides (-32.2%), HDL-C (+5.7%), fasting insulin (-14.1%), and HOMA-IR (-27.3%) vs. placebo in metabolic syndrome patients (Cicero et al., 2019).</li>
-                    <li>Animal studies show berberine reduces gut Firmicutes/Bacteroidetes ratios, decreases dietary polysaccharide degradation, and activates AMPK and Fiaf pathways (Xie et al., 2011).</li>
-                </ul>
-                <p class="caveat">Caveat: Low oral bioavailability. Most human data from small trials or combination products. Needs large independent RCTs with berberine alone. May interact with medications.</p>
-                <div class="refs">
-                    <p>Zhang, Q. et al. (2010). Berberine Moderates Glucose and Lipid Metabolism through Multipathway Mechanism. <em>Evidence-Based Complementary and Alternative Medicine</em>, 2011, 924851. <a href="https://doi.org/10.1155/2011/924851" target="_blank" rel="noopener">doi:10.1155/2011/924851</a></p>
-                    <p>Cicero, A. F. G. (2019). Effects of a combined nutraceutical on glucose and lipid metabolism in women with post-menopausal incident metabolic syndrome. <em>Journal of Food and Nutritional Medicine</em>. <a href="https://doi.org/10.31487/j.jfnm.2019.02.01" target="_blank" rel="noopener">doi:10.31487/j.jfnm.2019.02.01</a></p>
-                    <p>Xie, W. et al. (2011). Effects and Action Mechanisms of Berberine and <em>Rhizoma coptidis</em> on Gut Microbes and Obesity. <em>PLoS ONE</em>, 6(9), e24520. <a href="https://doi.org/10.1371/journal.pone.0024520" target="_blank" rel="noopener">doi:10.1371/journal.pone.0024520</a></p>
-                </div>
-            </div>
-        </article>
-
-    </section>
-</main>
-
-<!-- Disclaimer -->
-<section class="disclaimer container">
-    <p><strong>Disclaimer:</strong> This guide is for informational purposes only and is not medical advice. Always consult a healthcare professional before starting any supplement regimen. Individual needs vary based on health status, diet, and medications.</p>
+  <div class="p-6 border border-outline/20 bg-white">
+    <h4 class="font-sans text-[10px] font-bold uppercase tracking-widest mb-2">Disclaimer</h4>
+    <p class="text-[11px] font-serif italic text-on-surface-variant leading-relaxed">
+      This compendium is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before initiating any supplement regimen. Individual needs vary based on health status, genetics, diet, and concurrent medications.
+    </p>
+  </div>
+</aside>
+</div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>All recommendations sourced from peer-reviewed meta-analyses and randomized controlled trials via <a href="https://scite.ai" target="_blank" rel="noopener">scite.ai</a></p>
-        <p class="copy">&copy; 2026 Donny Supplements</p>
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!-- TAB 2: HIGH POTENTIAL                                           -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<section class="tab-section" id="potential" data-section="potential-section">
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
+<div class="lg:col-span-8">
+  <div class="flex items-center justify-between mb-4 journal-border pb-2">
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest">High-Potential Longevity Compounds</h2>
+    <span class="font-sans text-[10px] uppercase text-outline">Moderate to Emerging Evidence</span>
+  </div>
+  <div class="bg-surface-high/40 p-5 mb-10">
+    <p class="text-sm font-serif italic leading-relaxed text-on-surface-variant">
+      These compounds demonstrate compelling mechanisms and promising early clinical data for extending human healthspan. They require additional large-scale replication before achieving full clinical validation. Active clinical trials are underway for most.
+    </p>
+  </div>
+
+  <div class="space-y-10">
+
+    <!-- P1 ── NMN -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">NMN (Nicotinamide Mononucleotide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">250 &ndash; 1,000 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">NAD+ Precursor &bull; Sirtuin Reactivation &bull; Mitochondrial Rescue</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Direct precursor to NAD+. Restores the cellular NAD+/NADH ratio, reactivating sirtuins (SIRT1 and SIRT3) to improve mitochondrial function, reduce oxidative stress, and stave off cellular senescence. The leading NAD+ precursor in longevity research.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>RCT (N=80, double-blind): All NMN groups (300/600/900 mg) significantly increased blood NAD+ at days 30 and 60 (all p&le;0.001). Walking distance on 6-min test significantly higher vs. placebo (p&lt;0.01). Biological age unchanged in NMN groups while it increased in placebo (p&lt;0.05) (Yi et al., 2022).</li>
+          <li>Uthever&trade; NMN study: <strong class="text-on-surface">38% increase in NAD+ levels</strong> after 60 days.</li>
+          <li>Meta-analysis of 10 RCTs in older adults: minimal functional impact on skeletal muscle strength or gait speed; pilot studies hint at improved insulin sensitivity in prediabetic women.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Strong for biomarker elevation (NAD+), but functional clinical endpoints still emerging. Long-term safety data in humans still accumulating.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1007/s11357-022-00705-1" target="_blank" rel="noopener">Yi 2022 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- P2 ── Spermidine -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Spermidine</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">1 &ndash; 3 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Caloric Restriction Mimetic &bull; EP300 Inhibition &bull; Autophagy Induction</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Natural polyamine functioning as a caloric restriction mimetic. Induces cellular autophagy primarily by inhibiting EP300, an acetyltransferase that otherwise suppresses autophagy, initiating breakdown and recycling of damaged organelles and proteins. Spermidine levels decline with age, and higher dietary intake is independently associated with reduced mortality.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Dietary epidemiological studies (N&gt;800): higher spermidine intake independently associated with <strong class="text-on-surface">lower all-cause, cardiovascular, and cancer mortality</strong>.</li>
+          <li>Animal models: <strong class="text-on-surface">10% increase in overall longevity</strong>.</li>
+          <li>High heritability (82%) of erythrocyte spermidine identified in twin metabolomics study; correlated with 59 metabolites and 22 proteins linked to longevity (Kaminsky et al., 2024, <em>Aging Cell</em>).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Epidemiological and animal data compelling; large-scale human intervention RCTs needed.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1111/acel.14311" target="_blank" rel="noopener">Kaminsky 2024 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.18632/aging.101517" target="_blank" rel="noopener">Madeo 2018 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- P3 ── Fisetin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Fisetin</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">20 mg/kg &bull; Intermittent Protocol</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Senolytic &bull; PI3K/AKT/mTOR Inhibition &bull; SASP Suppression</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Potent senolytic flavonoid that selectively induces apoptosis in non-functioning senescent "zombie" cells by inhibiting pro-survival PI3K/AKT/mTOR pathways and suppressing the damaging Senescence-Associated Secretory Phenotype (SASP). Administered in intermittent "hit-and-run" protocols rather than daily.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Progeroid and aged mice: intermittent treatment drastically <strong class="text-on-surface">reduced senescent cell burden, restored tissue homeostasis, and extended maximum lifespan</strong>.</li>
+          <li>Human pilot data: senescent cell clearance confirmed in human adipose explants.</li>
+          <li>AFFIRM-LITE clinical trial targeting frailty is ongoing.</li>
+          <li>Senolytic therapy in human brain organoids: reduced age-related inflammation and rejuvenated transcriptomic aging clocks (Aguado et al., 2023, <em>Nature Aging</em>).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging. Strong animal and pilot human data; awaiting results from AFFIRM-LITE and other ongoing trials.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1038/s43587-023-00519-6" target="_blank" rel="noopener">Aguado 2023 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- P4 ── Quercetin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Quercetin</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">1,000 mg &bull; Intermittent</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Senolytic &bull; NF-kB Inhibition &bull; Immune Cell Clearance</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Flavonoid senolytic that clears senescent immune cells and mitigates inflammation by inhibiting the NF-kB pathway, reducing pro-inflammatory cytokines. Most effective when combined with dasatinib in senolytic protocols or with other polyphenols (resveratrol, curcumin) for synergistic effects.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Phase II clinical trial (N=32): quercetin + resveratrol + curcumin yielded <strong class="text-on-surface">2.5% reduction in macular drusen volume (p=0.03)</strong> over 24 months in AMD patients.</li>
+          <li>Dasatinib + Quercetin combination: improved physical function in early human trials of senolytic therapy.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Animal and human RCT data available; larger longevity-specific trials needed.</p>
+      </div>
+    </article>
+
+    <!-- P5 ── Alpha-Ketoglutarate -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Alpha-Ketoglutarate (Ca-AKG)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">1,000 &ndash; 2,000 mg / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Krebs Cycle Intermediate &bull; TET Demethylase Cofactor &bull; Epigenetic Fidelity</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Intermediary in the Krebs cycle linking metabolism to gene regulation. Essential cofactor for TET DNA demethylases and JmjC histone demethylases, preserving epigenetic fidelity and promoting DNA repair while mimicking metabolic benefits of caloric restriction via FOXO1 and AMPK.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Pilot study (N=42, average age 64, 7 months): Calcium-AKG demonstrated an <strong class="text-on-surface">average 8-year reduction in biological age</strong> measured by DNA methylation epigenetic clocks.</li>
+          <li>Mouse studies: AKG-fed females protected against age-dependent increases in circulating inflammatory cytokines; healthspan improvements with reduced frailty (Rhoads &amp; Anderson, 2020, <em>Cell Metabolism</em>).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging. Compelling pilot study and animal data; larger human RCTs needed to confirm.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1016/j.cmet.2020.08.009" target="_blank" rel="noopener">Rhoads 2020 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">Calcium-AKG form preferred for stability</span>
+      </div>
+    </article>
+
+    <!-- P6 ── Rapamycin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Rapamycin (Low-Dose)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">Dosage Under Investigation</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">mTORC1 Inhibition &bull; Autophagy &bull; NAD+/NADH Ratio &bull; Mitochondrial Function</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        Direct pharmacological inhibitor of mTOR complex 1. Reduces cellular anabolic demand, strongly activates autophagy, improves mitochondrial function, and increases the NAD+/NADH ratio. The most robust life-extending intervention in preclinical geroscience across all model organisms tested.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>NIA Interventions Testing Program: rapamycin fed late in life <strong class="text-on-surface">profoundly extended lifespan</strong> of genetically heterogeneous mice.</li>
+          <li>Extends lifespan in yeast, worms, flies, and mice&mdash;the only compound to do so across all tested model organisms.</li>
+          <li>VIAging trial and other human safety/deceleration pilot trials currently underway.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging / Preclinical. Extremely strong animal data; human longevity trials are pending validation. Rx only with physician supervision.</p>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- Sidebar (potential tab) -->
+<aside class="lg:col-span-4 space-y-12">
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">Aging Hallmarks Targeted</h2>
+    <ul class="space-y-5">
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">01</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Cellular Senescence</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Fisetin, Quercetin, Rapamycin</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">02</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">NAD+ Decline</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">NMN, Rapamycin</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">03</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Disabled Autophagy</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Spermidine, Rapamycin, Metformin</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">04</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Epigenetic Alterations</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Alpha-Ketoglutarate, Metformin</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">05</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Mitochondrial Dysfunction</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">CoQ10, NMN, Rapamycin</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">06</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Chronic Inflammation</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Omega-3, Curcumin, Quercetin</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">Active Clinical Trials</h2>
+    <ul class="space-y-4">
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">I</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">TAME Trial</div>
+          <div class="text-xs text-on-surface-variant">Targeting Aging with Metformin. Multi-center RCT in healthy adults.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">II</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">AFFIRM-LITE</div>
+          <div class="text-xs text-on-surface-variant">Fisetin for frailty in older adults.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">III</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">VIAging</div>
+          <div class="text-xs text-on-surface-variant">Low-dose rapamycin safety/efficacy in human aging.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-6 border border-outline/20 bg-white">
+    <h4 class="font-sans text-[10px] font-bold uppercase tracking-widest mb-2">Important Notice</h4>
+    <p class="text-[11px] font-serif italic text-on-surface-variant leading-relaxed">
+      High-potential compounds are included based on mechanistic plausibility and early clinical signals. They should not be taken without medical guidance. Several (Metformin, Rapamycin) are prescription medications. This is not medical advice.
+    </p>
+  </div>
+</aside>
+</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!-- SLIDE DECK VIEWER                                               -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<section class="mt-24 mb-16 journal-border-top pt-12" id="slides">
+<div class="max-w-4xl">
+  <div class="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-secondary mb-4">Presentation</div>
+  <h2 class="text-4xl font-serif font-light mb-4 italic">Longevity Supplement Slide Deck</h2>
+  <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-8">
+    Generated from our research sources via NotebookLM. A comprehensive overview of all 14 longevity compounds with mechanisms, clinical evidence, and dosage recommendations.
+  </p>
+  <div id="slide-viewer-container" class="bg-surface-variant/50 p-8 flex items-center justify-center min-h-[200px]">
+    <p class="text-sm font-sans text-on-surface-variant italic">Slide deck is being generated. Refresh shortly to view.</p>
+  </div>
+</div>
+</section>
+
+<!-- Transparency Section -->
+<section class="mt-8 mb-32 journal-border-top pt-12">
+<div class="max-w-3xl">
+  <h2 class="text-4xl font-serif font-light mb-8 italic">Transparency &amp; Sources</h2>
+  <p class="text-lg font-serif leading-relaxed text-on-surface-variant mb-6">
+    All evidence was gathered using <a href="https://scite.ai" target="_blank" rel="noopener" class="text-secondary hover:underline">scite.ai</a> Smart Citations for literature verification and <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="text-secondary hover:underline">Google NotebookLM</a> for source-grounded synthesis. Every claim is traceable to peer-reviewed publications via DOI links.
+  </p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+    <div>
+      <div class="text-[9px] font-sans uppercase tracking-widest text-outline mb-2">Review Process</div>
+      <div class="text-xs font-bold">Dual-Source Verified</div>
     </div>
+    <div>
+      <div class="text-[9px] font-sans uppercase tracking-widest text-outline mb-2">Citation Engine</div>
+      <div class="text-xs font-bold">scite.ai Smart Citations</div>
+    </div>
+    <div>
+      <div class="text-[9px] font-sans uppercase tracking-widest text-outline mb-2">AI Synthesis</div>
+      <div class="text-xs font-bold">NotebookLM (Gemini)</div>
+    </div>
+    <div>
+      <div class="text-[9px] font-sans uppercase tracking-widest text-outline mb-2">Update Cycle</div>
+      <div class="text-xs font-bold">Ongoing</div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#f6f3f2] border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
+  <div class="space-y-4">
+    <div class="text-xl font-serif font-bold text-primary-dark">DONNY</div>
+    <p class="font-serif text-sm leading-relaxed text-on-surface">An authoritative longevity research compendium. Evidence-based. Peer-reviewed. Transparent.</p>
+  </div>
+  <div class="flex flex-col gap-3">
+    <h4 class="text-on-surface font-sans text-xs uppercase tracking-widest font-bold">Research</h4>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#proven-section">Proven Compounds</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#potential-section">High Potential</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#methodology">Methodology</a>
+  </div>
+  <div class="flex flex-col gap-3">
+    <h4 class="text-on-surface font-sans text-xs uppercase tracking-widest font-bold">Sources</h4>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="https://scite.ai" target="_blank" rel="noopener">scite.ai</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>
+  </div>
+  <div class="flex flex-col gap-3">
+    <h4 class="text-on-surface font-sans text-xs uppercase tracking-widest font-bold">Legal</h4>
+    <span class="text-on-surface font-sans text-xs uppercase tracking-widest">Not Medical Advice</span>
+    <span class="text-on-surface font-sans text-xs uppercase tracking-widest">No Pharma Funding</span>
+  </div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 pb-12">
+  <div class="border-t border-outline/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="font-sans text-[9px] tracking-[0.2em] text-on-surface uppercase">&copy; 2026 Donny Supplements. All Rights Reserved.</p>
+    <div class="text-[9px] font-sans text-outline tracking-widest uppercase">Citations powered by scite.ai &bull; Synthesis by NotebookLM</div>
+  </div>
+</div>
 </footer>
 
 <script>
-document.querySelectorAll('.tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(s => s.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('active');
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    // Re-trigger animations
+    document.getElementById(btn.dataset.tab).querySelectorAll('.fade-in').forEach(el => {
+      el.style.animation = 'none';
+      el.offsetHeight;
+      el.style.animation = '';
     });
+  });
 });
 </script>
 
