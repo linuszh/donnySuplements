@@ -204,9 +204,84 @@ footer p { font-size: 0.9rem; margin-bottom: 6px; }
 footer a { color: var(--gold); }
 .copy { font-size: 0.8rem; opacity: .6; }
 
+/* ── Tabs ── */
+.tabs {
+    display: flex;
+    gap: 4px;
+    padding-top: 24px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tab {
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: color .15s, border-color .15s;
+}
+
+.tab:hover { color: var(--navy); }
+
+.tab.active {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+}
+
+/* ── Tab Content ── */
+.tab-content { display: none; }
+.tab-content.active { display: grid; }
+
+/* ── Promising Banner ── */
+.promising-banner {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    color: #c7d2fe;
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    border-left: 4px solid #818cf8;
+}
+
+/* ── Promising Card Variants ── */
+.card--promising {
+    border-color: #c7d2fe;
+}
+
+.card--promising:hover {
+    box-shadow: 0 8px 30px rgba(99, 102, 241, .1);
+}
+
+.card--promising .evidence {
+    border-left-color: #818cf8;
+}
+
+.badge--promising {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    color: #fff;
+}
+
+.caveat {
+    font-size: 0.82rem;
+    color: #b45309;
+    background: #fffbeb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-left: 3px solid #f59e0b;
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
     .grid { grid-template-columns: 1fr; gap: 20px; }
     .hero { padding: 48px 16px 40px; }
     .card-head { flex-direction: column; }
+    .tabs { overflow-x: auto; }
+    .tab { padding: 10px 20px; font-size: 0.88rem; }
 }

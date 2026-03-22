@@ -20,9 +20,17 @@
     </div>
 </header>
 
-<!-- Supplements Grid -->
+<!-- Tabs -->
+<nav class="tabs container">
+    <button class="tab active" data-tab="proven">Proven</button>
+    <button class="tab" data-tab="promising">Promising</button>
+</nav>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- TAB 1 ── PROVEN                                     -->
+<!-- ════════════════════════════════════════════════════ -->
 <main class="container">
-    <section class="grid" id="supplements">
+    <section class="grid tab-content active" id="proven">
 
         <!-- 1 ── Creatine -->
         <article class="card">
@@ -238,6 +246,126 @@
         </article>
 
     </section>
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!-- TAB 2 ── PROMISING                                  -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section class="grid tab-content" id="promising">
+
+        <div class="promising-banner">
+            <p>These supplements show early positive results in clinical trials but need more large-scale replication before they can be considered fully proven. Watch this space.</p>
+        </div>
+
+        <!-- P1 ── NMN (Nicotinamide Mononucleotide) -->
+        <article class="card card--promising">
+            <div class="card-head">
+                <h2>NMN</h2>
+                <span class="badge badge--promising">600 mg / day</span>
+            </div>
+            <p class="benefit">Boosts NAD+ levels, improves walking endurance, and may slow biological aging markers. The leading NAD+ precursor for longevity research.</p>
+            <div class="evidence">
+                <h3>Key Evidence</h3>
+                <ul>
+                    <li>RCT (n=80, double-blind, placebo-controlled, dose-dependent): All NMN groups (300/600/900 mg) significantly increased blood NAD+ at days 30 and 60 (all p &le; 0.001). Walking distance on 6-min test was significantly higher vs. placebo (all p &lt; 0.01). Biological age stayed unchanged in NMN groups while it increased in placebo (p &lt; 0.05) (Yi et al., 2022).</li>
+                    <li>Optimal dose appears to be 600 mg/day for NAD+ elevation and physical performance. Safe and well-tolerated up to 900 mg/day.</li>
+                </ul>
+                <p class="caveat">Caveat: Limited human trials to date; most longevity data from animal models. Long-term safety data in humans still emerging.</p>
+                <div class="refs">
+                    <p>Yi, L., Maier, A. B., &amp; Tao, R. (2022). The efficacy and safety of &beta;-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults. <em>GeroScience</em>, 45(1), 29–43. <a href="https://doi.org/10.1007/s11357-022-00705-1" target="_blank" rel="noopener">doi:10.1007/s11357-022-00705-1</a></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- P2 ── Lion's Mane -->
+        <article class="card card--promising">
+            <div class="card-head">
+                <h2>Lion's Mane</h2>
+                <span class="badge badge--promising">500 – 3,000 mg / day</span>
+            </div>
+            <p class="benefit">Neuroprotective mushroom that may improve mood, sleep, and cognitive function. Contains compounds that stimulate nerve growth factor (NGF).</p>
+            <div class="evidence">
+                <h3>Key Evidence</h3>
+                <ul>
+                    <li>Clinical study (n=77): 8 weeks of <em>Hericium erinaceus</em> supplementation significantly decreased depression, anxiety, and sleep disorders in overweight/obese adults. Increased circulating pro-BDNF levels (Vigna et al., 2019).</li>
+                    <li>Prior double-blind placebo-controlled RCT showed significant improvement in cognitive function scores in mild cognitive impairment group vs. placebo. A separate RCT by Nagano et al. showed reduced depression and anxiety in women.</li>
+                </ul>
+                <p class="caveat">Caveat: Studies are small. The cognitive function RCT showed benefits reversed after supplementation stopped. Larger and longer trials needed.</p>
+                <div class="refs">
+                    <p>Vigna, L. et al. (2019). <em>Hericium erinaceus</em> Improves Mood and Sleep Disorders in Patients Affected by Overweight or Obesity. <em>Evidence-Based Complementary and Alternative Medicine</em>, 2019, 1–12. <a href="https://doi.org/10.1155/2019/7861297" target="_blank" rel="noopener">doi:10.1155/2019/7861297</a></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- P3 ── Rhodiola Rosea -->
+        <article class="card card--promising">
+            <div class="card-head">
+                <h2>Rhodiola Rosea</h2>
+                <span class="badge badge--promising">200 – 600 mg / day</span>
+            </div>
+            <p class="benefit">Adaptogenic herb that combats fatigue, improves mental performance and reaction time, and reduces stress-induced burnout symptoms.</p>
+            <div class="evidence">
+                <h3>Key Evidence</h3>
+                <ul>
+                    <li>Double-blind RCT (n=60): 576 mg/day for 4 weeks exerted notable anti-fatigue effect, increased mental performance (concentration), and decreased cortisol response to awakening stress in burnout patients (Stojcheva &amp; Quintela, 2022, reviewing clinical trials).</li>
+                    <li>Double-blind RCT (n=26): 600 mg/day for 4 weeks significantly shortened reaction time and improved correct responses in psychomotor tests, and raised plasma total antioxidant capacity (Jowko et al., 2018).</li>
+                    <li>Open-label study (n=101): 400 mg/day for 4 weeks showed clinically relevant improvements in stress symptoms, disability, and functional impairment — improvements seen as early as 3 days (Edwards et al., 2012).</li>
+                </ul>
+                <p class="caveat">Caveat: Many studies are small or open-label. Physical performance benefits are inconsistent. Needs large-scale placebo-controlled RCTs.</p>
+                <div class="refs">
+                    <p>Stojcheva, E. I., &amp; Quintela, J. C. (2022). The Effectiveness of <em>Rhodiola rosea</em> L. Preparations in Alleviating Various Aspects of Life-Stress Symptoms. <em>Molecules</em>, 27(12), 3902. <a href="https://doi.org/10.3390/molecules27123902" target="_blank" rel="noopener">doi:10.3390/molecules27123902</a></p>
+                    <p>Jowko, E. et al. (2018). Effects of <em>Rhodiola rosea</em> supplementation on mental performance, physical capacity, and oxidative stress biomarkers. <em>Journal of Sport and Health Science</em>, 7(4), 473–480. <a href="https://doi.org/10.1016/j.jshs.2016.05.005" target="_blank" rel="noopener">doi:10.1016/j.jshs.2016.05.005</a></p>
+                    <p>Edwards, D. H. et al. (2012). Therapeutic Effects and Safety of <em>Rhodiola rosea</em> Extract WS&reg; 1375. <em>Phytotherapy Research</em>, 26(8), 1220–1225. <a href="https://doi.org/10.1002/ptr.3712" target="_blank" rel="noopener">doi:10.1002/ptr.3712</a></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- P4 ── Collagen Peptides -->
+        <article class="card card--promising">
+            <div class="card-head">
+                <h2>Collagen Peptides</h2>
+                <span class="badge badge--promising">2.5 – 10 g / day</span>
+            </div>
+            <p class="benefit">Improves skin hydration, elasticity, and collagen density. May reduce skin wrinkling and support joint health.</p>
+            <div class="evidence">
+                <h3>Key Evidence</h3>
+                <ul>
+                    <li>Two placebo-controlled RCTs showed oral collagen peptides significantly increased skin hydration after 8 weeks, increased collagen density and decreased collagen fragmentation after just 4 weeks — effects persisted at 12 weeks (Asserin et al., 2015).</li>
+                    <li>RCT (n=72): 2.5 g collagen peptides daily for 12 weeks significantly improved skin hydration, elasticity, roughness, and density vs. placebo. Effects retained 4 weeks after stopping (Bolke et al., 2019).</li>
+                    <li>RCT (n=64): 1 g/day low-molecular-weight collagen peptide for 12 weeks significantly improved skin hydration, wrinkling, and elasticity (Kim et al., 2018).</li>
+                </ul>
+                <p class="caveat">Caveat: Systematic review of 11 studies (805 patients) is encouraging, but many trials are industry-funded. Joint health claims need more independent replication.</p>
+                <div class="refs">
+                    <p>Asserin, J. et al. (2015). The effect of oral collagen peptide supplementation on skin moisture and the dermal collagen network. <em>Journal of Cosmetic Dermatology</em>, 14(4), 291–301. <a href="https://doi.org/10.1111/jocd.12174" target="_blank" rel="noopener">doi:10.1111/jocd.12174</a></p>
+                    <p>Bolke, L. et al. (2019). A Collagen Supplement Improves Skin Hydration, Elasticity, Roughness, and Density. <em>Nutrients</em>, 11(10), 2494. <a href="https://doi.org/10.3390/nu11102494" target="_blank" rel="noopener">doi:10.3390/nu11102494</a></p>
+                    <p>Kim, D.-U. et al. (2018). Oral Intake of Low-Molecular-Weight Collagen Peptide Improves Hydration, Elasticity, and Wrinkling in Human Skin. <em>Nutrients</em>, 10(7), 826. <a href="https://doi.org/10.3390/nu10070826" target="_blank" rel="noopener">doi:10.3390/nu10070826</a></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- P5 ── Berberine -->
+        <article class="card card--promising">
+            <div class="card-head">
+                <h2>Berberine</h2>
+                <span class="badge badge--promising">500 mg 2–3x / day</span>
+            </div>
+            <p class="benefit">Lowers blood glucose and lipids with effects comparable to metformin in some studies. Modulates gut microbiota and reduces visceral fat.</p>
+            <div class="evidence">
+                <h3>Key Evidence</h3>
+                <ul>
+                    <li>Preclinical and clinical data show berberine significantly decreases fasting blood glucose, insulin resistance (HOMA-IR), total cholesterol, and triglycerides. Effects on glucose metabolism do not depend on insulin concentration, similar to metformin (Cicero et al., 2019; Zhang et al., 2010).</li>
+                    <li>Double-blind placebo-controlled RCT (n=40) of berberine-containing nutraceutical showed significant improvement in triglycerides (-32.2%), HDL-C (+5.7%), fasting insulin (-14.1%), and HOMA-IR (-27.3%) vs. placebo in metabolic syndrome patients (Cicero et al., 2019).</li>
+                    <li>Animal studies show berberine reduces gut Firmicutes/Bacteroidetes ratios, decreases dietary polysaccharide degradation, and activates AMPK and Fiaf pathways (Xie et al., 2011).</li>
+                </ul>
+                <p class="caveat">Caveat: Low oral bioavailability. Most human data from small trials or combination products. Needs large independent RCTs with berberine alone. May interact with medications.</p>
+                <div class="refs">
+                    <p>Zhang, Q. et al. (2010). Berberine Moderates Glucose and Lipid Metabolism through Multipathway Mechanism. <em>Evidence-Based Complementary and Alternative Medicine</em>, 2011, 924851. <a href="https://doi.org/10.1155/2011/924851" target="_blank" rel="noopener">doi:10.1155/2011/924851</a></p>
+                    <p>Cicero, A. F. G. (2019). Effects of a combined nutraceutical on glucose and lipid metabolism in women with post-menopausal incident metabolic syndrome. <em>Journal of Food and Nutritional Medicine</em>. <a href="https://doi.org/10.31487/j.jfnm.2019.02.01" target="_blank" rel="noopener">doi:10.31487/j.jfnm.2019.02.01</a></p>
+                    <p>Xie, W. et al. (2011). Effects and Action Mechanisms of Berberine and <em>Rhizoma coptidis</em> on Gut Microbes and Obesity. <em>PLoS ONE</em>, 6(9), e24520. <a href="https://doi.org/10.1371/journal.pone.0024520" target="_blank" rel="noopener">doi:10.1371/journal.pone.0024520</a></p>
+                </div>
+            </div>
+        </article>
+
+    </section>
 </main>
 
 <!-- Disclaimer -->
@@ -252,6 +380,17 @@
         <p class="copy">&copy; 2026 Donny Supplements</p>
     </div>
 </footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(s => s.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+});
+</script>
 
 </body>
 </html>
