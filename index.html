@@ -646,8 +646,12 @@ tailwind.config = {
   <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-8">
     Generated from our research sources via NotebookLM. A comprehensive overview of all 14 longevity compounds with mechanisms, clinical evidence, and dosage recommendations.
   </p>
-  <div id="slide-viewer-container" class="bg-surface-variant/50 p-8 flex items-center justify-center min-h-[200px]">
-    <p class="text-sm font-sans text-on-surface-variant italic">Slide deck is being generated. Refresh shortly to view.</p>
+  <div id="slide-viewer-container" class="bg-surface-variant/50 p-1">
+    <iframe src="slides.pdf" class="w-full border-0" style="height:560px;" title="The Geroscience Dossier - Longevity Supplement Slide Deck"></iframe>
+  </div>
+  <div class="flex gap-6 mt-4">
+    <a href="slides.pdf" target="_blank" class="text-[10px] font-bold font-sans uppercase tracking-widest flex items-center gap-1 hover:text-secondary">Open Full Screen <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+    <a href="slides.pdf" download class="text-[10px] font-bold font-sans uppercase tracking-widest flex items-center gap-1 hover:text-secondary">Download PDF <span class="material-symbols-outlined text-sm">download</span></a>
   </div>
 </div>
 </section>
