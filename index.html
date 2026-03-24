@@ -57,6 +57,8 @@ tailwind.config = {
   article.fade-in:nth-child(6) { animation-delay: .20s; }
   article.fade-in:nth-child(7) { animation-delay: .24s; }
   article.fade-in:nth-child(8) { animation-delay: .28s; }
+  article.fade-in:nth-child(9) { animation-delay: .32s; }
+  article.fade-in:nth-child(10) { animation-delay: .36s; }
   .slide-viewer { border: none; width: 100%; height: 480px; }
 </style>
 </head>
@@ -69,6 +71,7 @@ tailwind.config = {
   <div class="hidden md:flex gap-10">
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#proven-section">Proven</a>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#potential-section">High Potential</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#peptides-section">Peptides</a>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#methodology">Methodology</a>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:text-secondary transition-colors duration-200" href="#slides">Presentation</a>
   </div>
@@ -94,9 +97,9 @@ tailwind.config = {
   </div>
   <div class="hidden lg:block text-right">
     <div class="text-[10px] font-sans uppercase tracking-widest text-outline mb-1">Last Updated</div>
-    <div class="text-sm font-sans font-medium">March 22, 2026</div>
+    <div class="text-sm font-sans font-medium">March 24, 2026</div>
     <div class="text-[10px] font-sans uppercase tracking-widest text-outline mt-4 mb-1">Compounds Indexed</div>
-    <div class="text-sm font-sans font-medium">14</div>
+    <div class="text-sm font-sans font-medium">24</div>
   </div>
 </div>
 </header>
@@ -105,6 +108,7 @@ tailwind.config = {
 <div class="flex gap-0 mb-0 journal-border" id="tab-nav">
   <button class="tab-btn active font-sans text-xs font-bold uppercase tracking-widest pb-3 px-6 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer" data-tab="proven">Scientifically Proven</button>
   <button class="tab-btn font-sans text-xs font-bold uppercase tracking-widest pb-3 px-6 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer" data-tab="potential">High Potential</button>
+  <button class="tab-btn font-sans text-xs font-bold uppercase tracking-widest pb-3 px-6 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors duration-200 cursor-pointer" data-tab="peptides">Peptides</button>
 </div>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
@@ -637,6 +641,434 @@ tailwind.config = {
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
+<!-- TAB 3: PEPTIDES                                                   -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<section class="tab-section" id="peptides" data-section="peptides-section">
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
+<div class="lg:col-span-8">
+  <div class="flex items-center justify-between mb-4 journal-border pb-2">
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest">Bioactive Peptides</h2>
+    <span class="font-sans text-[10px] uppercase text-outline">Emerging Trend &bull; High Research Activity</span>
+  </div>
+  <div class="bg-surface-high/40 p-5 mb-10">
+    <p class="text-sm font-serif italic leading-relaxed text-on-surface-variant mb-4">
+      Peptides are short chains of amino acids (typically 2&ndash;50 residues) that act as highly specific signaling molecules in the body. Unlike traditional supplements, peptides bind to specific receptors on cell surfaces, triggering targeted intracellular cascades&mdash;activating growth factors, modulating immune responses, or enhancing mitochondrial function with remarkable precision.
+    </p>
+    <p class="text-sm font-serif italic leading-relaxed text-on-surface-variant">
+      <strong class="text-on-surface not-italic">How they work:</strong> Peptides mimic or augment endogenous signaling molecules. They are typically administered via subcutaneous injection, intranasal spray, or topical application because oral bioavailability is limited by gastric proteolysis. Their short half-lives and receptor specificity contribute to favorable safety profiles, though most remain in preclinical or early clinical investigation for longevity and regenerative applications.
+    </p>
+  </div>
+
+  <div class="space-y-10">
+
+    <!-- PEP1 ── BPC-157 -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">BPC-157 (Body Protection Compound)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">250 &ndash; 500 &micro;g / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Gastric Pentadecapeptide &bull; NO System Modulation &bull; Growth Factor Upregulation &bull; Angiogenesis</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A 15-amino-acid peptide (GEPPPGKPADDAGLV) derived from human gastric juice. BPC-157 is stable in gastric acid&mdash;unique among peptides&mdash;and operates through multiple mechanisms: upregulating growth factor receptors (VEGF, EGF), modulating the nitric oxide (NO) system, promoting angiogenesis, and counteracting organ damage. It accelerates healing of muscle, tendon, ligament, bone, and gastrointestinal tissue in preclinical models.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Rat model: BPC-157 given locally or intraperitoneally <strong class="text-on-surface">accelerated post-injury muscle healing and restored full function</strong> at all investigated intervals (Novinscak et al., 2008).</li>
+          <li>Complete quadriceps transection model: systemic BPC-157 treatment <strong class="text-on-surface">induced prompt muscle healing with functional restoration</strong> (Staresinic et al., 2006).</li>
+          <li>Prolonged esophagitis model with sphincter failure: BPC-157 demonstrated significant <strong class="text-on-surface">anti-esophagitis therapeutic potential</strong>, remaining stable in gastric juice (Bratievi&cacute; et al., 2006).</li>
+          <li>Phase II clinical trial for inflammatory bowel disease (IBD) has been conducted; further human trials ongoing.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Extensive preclinical data across dozens of animal models; limited but promising human trial data. Uniquely stable in gastric juice.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1007/s00595-007-3706-2" target="_blank" rel="noopener">Novinscak 2008 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1002/jor.20089" target="_blank" rel="noopener">Staresinic 2006 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP2 ── Thymosin Beta-4 (TB-500) -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Thymosin Beta-4 (TB-500)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">2 &ndash; 5 mg / 2&times; week</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Actin Sequestration &bull; Cell Migration &bull; Cardiac Repair &bull; Anti-Fibrotic</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A naturally occurring 43-amino-acid peptide and the primary G-actin sequestering molecule in eukaryotic cells. Thymosin &beta;4 promotes tissue repair by modulating actin dynamics to enable cell migration, reducing inflammation, and stimulating stem cell differentiation. It plays a critical role in wound healing, cardiac repair after ischemic injury, and muscle regeneration.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Cardiac repair studies: Thymosin &beta;4 <strong class="text-on-surface">activated resident cardiac progenitor cells and promoted myocardial repair</strong> following ischemic injury in animal models (Hara, 2011).</li>
+          <li>Demonstrated significant <strong class="text-on-surface">anti-fibrotic properties</strong> in multiple organ systems, reducing scar tissue formation.</li>
+          <li>Accelerates dermal wound healing by promoting keratinocyte migration and angiogenesis.</li>
+          <li>Phase II clinical trials completed for corneal wound healing (RegeneRx Biopharmaceuticals).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Strong animal data across cardiac, dermal, and corneal repair models. Phase II human trials in ophthalmology completed.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1016/b978-0-12-386015-6.00032-9" target="_blank" rel="noopener">Hara 2011 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP3 ── GHK-Cu -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">GHK-Cu (Copper Peptide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">Topical &bull; 1 &ndash; 2% concentration</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Collagen Synthesis &bull; Tissue Remodeling &bull; Anti-Inflammatory &bull; Gene Expression Modulation</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A naturally occurring tripeptide (Gly-His-Lys) found in human plasma, saliva, and urine that forms a high-affinity chelate with copper(II). Serum levels average 200 ng/mL at age 20 but decline to 80 ng/mL by age 60. GHK-Cu stimulates collagen I, III, and VI synthesis, promotes wound healing and tissue remodeling, and modulates the expression of over 4,000 human genes&mdash;resetting gene expression patterns toward a healthier state (Dou et al., 2020).
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>In vitro and in vivo studies demonstrate <strong class="text-on-surface">prominent antioxidant, anti-inflammatory, and tissue remodeling effects</strong> including promotion of wound healing and skin regeneration (Dou et al., 2020).</li>
+          <li>Preliminary observations suggest GHK can <strong class="text-on-surface">partially reverse cognitive impairment in aging mice</strong> by targeting anti-inflammatory and epigenetic pathways.</li>
+          <li>Human efficacy tests show benefits for <strong class="text-on-surface">improving skin repair, anti-aging, anti-wrinkle, and moisturizing properties</strong> (Liu et al., 2022).</li>
+          <li>Gene expression studies: resets expression of ~32% of human genes to a younger pattern.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Strong in vitro and animal data; human studies primarily in dermatology. Systemic anti-aging applications need larger clinical trials.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.31491/apt.2020.03.014" target="_blank" rel="noopener">Dou 2020 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1021/acssuschemeng.2c04422" target="_blank" rel="noopener">Liu 2022 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP4 ── Epitalon -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Epitalon (AEDG Peptide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">5 &ndash; 10 mg / day &bull; 10&ndash;20 day cycles</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Telomerase Activation &bull; Pineal Gland Regulation &bull; Melatonin Synthesis &bull; Antioxidant</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A synthetic tetrapeptide (Ala-Glu-Asp-Gly) based on the amino acid composition of Epithalamin, a bovine pineal gland extract. First detected in physiological human pineal gland extract in 2017. Epitalon activates telomerase in human somatic cells, directly influences melatonin synthesis, modulates IL-2 mRNA levels, and has demonstrated geroprotective effects across 25 years of research (Araj et al., 2025).
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Telomerase-positive fibroblasts treated with Epitalon demonstrated <strong class="text-on-surface">high telomere lengths during the G1 phase</strong>, overcoming replicative limits (Araj et al., 2025).</li>
+          <li>12-year randomized clinical study (elderly patients with coronary disease): <strong class="text-on-surface">28% lower mortality, 2-fold lower cardiovascular mortality</strong>, and decreased functional age vs. control (Korkushko et al., 2006).</li>
+          <li>Epitalon <strong class="text-on-surface">effectively and selectively safeguarded aged human pineal cells</strong> from the aging process, confirming tissue-specific geroprotective activity.</li>
+          <li>Increases mitochondrial staining area by 1.5&times; in aging pineal gland cell cultures (Ivko et al., 2021).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Decades of in vitro and animal research; one long-term clinical study. Most evidence from Russian research groups. Replication by independent labs needed.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.3390/ijms26062691" target="_blank" rel="noopener">Araj 2025 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1007/s10517-006-0365-z" target="_blank" rel="noopener">Korkushko 2006 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.18632/aging.204007" target="_blank" rel="noopener">Xue 2022 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP5 ── SS-31 (Elamipretide) -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">SS-31 (Elamipretide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">Dosage Under Investigation</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">Cardiolipin Stabilization &bull; Mitochondrial Inner Membrane &bull; Electron Transport Chain &bull; ROS Reduction</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A Szeto-Schiller tetrapeptide (D-Arg-Dmt-Lys-Phe-NH2) that selectively concentrates &gt;1000-fold in the inner mitochondrial membrane. SS-31 stabilizes cardiolipin&mdash;a phospholipid critical for cristae structure and electron transport chain supercomplex assembly&mdash;thereby improving ATP synthesis, reducing reactive oxygen species, and rescuing mitochondrial dysfunction. Among the most promising therapeutic compounds for mitochondrial diseases.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Human failing heart tissue: Elamipretide <strong class="text-on-surface">improved mitochondrial function in the failing human heart</strong>, restoring respiratory capacity (Chatfield et al., 2019).</li>
+          <li>Phase II/III clinical trials for Barth syndrome, primary mitochondrial myopathy, and heart failure with reduced ejection fraction.</li>
+          <li>Animal studies: reverses age-related mitochondrial dysfunction, improves cardiac function, and reduces oxidative damage across multiple organ systems.</li>
+          <li>FDA granted Rare Pediatric Disease designation and Fast Track designation for Barth syndrome.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Strong (for mitochondrial diseases). Multiple Phase II/III clinical trials. FDA designations granted. Longevity applications in early investigation.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1016/j.jacbts.2018.12.005" target="_blank" rel="noopener">Chatfield 2019 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">Rx &bull; Clinical trials ongoing</span>
+      </div>
+    </article>
+
+    <!-- PEP6 ── KPV -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">KPV (Alpha-MSH Tripeptide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">200 &ndash; 500 &micro;g / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">NF-kB Inhibition &bull; PepT1 Transport &bull; Anti-Inflammatory &bull; Gut Barrier Integrity</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        The C-terminal tripeptide (Lys-Pro-Val) of alpha-melanocyte stimulating hormone (&alpha;-MSH), retaining potent anti-inflammatory activity without melanocortin receptor dependency. KPV is actively transported into colonocytes via the PepT1 transporter, where it enters the nucleus and inhibits NF-&kappa;B activation&mdash;the master inflammatory switch. This direct intracellular mechanism makes it uniquely effective for intestinal inflammation.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>PepT1-mediated uptake study: KPV transport into colonocytes <strong class="text-on-surface">reduces intestinal inflammation via direct NF-kB inhibition</strong> in the nucleus (Dalmasso et al., 2008).</li>
+          <li>Two murine colitis models: KPV showed <strong class="text-on-surface">significant anti-inflammatory effects partially independent of MC1R signaling</strong>, suggesting multiple therapeutic mechanisms (Laroui et al., 2008).</li>
+          <li>&alpha;-MSH and its fragments demonstrate broad-spectrum antimicrobial activity in addition to anti-inflammatory effects.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging. Strong mechanistic and animal data for gut inflammation. Human clinical trials needed for IBD and systemic inflammation applications.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1053/j.gastro.2007.10.026" target="_blank" rel="noopener">Dalmasso 2008 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1002/ibd.20334" target="_blank" rel="noopener">Laroui 2008 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP7 ── Selank -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Selank (TP-7)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">250 &ndash; 500 &micro;g &bull; Intranasal</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">GABA<sub>A</sub> Allosteric Modulation &bull; Anxiolytic &bull; Immunomodulatory &bull; Nootropic</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A synthetic heptapeptide combining a short fragment (Thr-Lys-Pro-Arg) of human immunoglobulin G heavy chain with the stabilizing tripeptide Pro-Gly-Pro. Selank possesses pronounced anxiolytic activity comparable to classical benzodiazepines but without addiction, withdrawal, or sedation. It modulates GABA<sub>A</sub> receptors allosterically, enhancing endogenous GABA binding, while simultaneously exerting immunomodulatory and nootropic effects.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Chronic mild stress model: combined Selank + diazepam was <strong class="text-on-surface">most effective in reducing anxiety</strong>; Selank alone was most effective in reducing elevated anxiety from chronic drug administration (Kasian et al., 2017).</li>
+          <li>Selank influences specific binding of GABA to GABA<sub>A</sub> receptors, modulating affinity of endogenous ligands (Filatova et al., 2017).</li>
+          <li>Approved in Russia as an anxiolytic medication; clinical trials demonstrated <strong class="text-on-surface">efficacy in generalized anxiety disorder and neurasthenia</strong>.</li>
+          <li>No addiction, sedation, or withdrawal syndrome reported&mdash;superior safety profile to benzodiazepines.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Approved medication in Russia. Clinical trial data available. Wider international regulatory approval and replication needed.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1155/2017/5091027" target="_blank" rel="noopener">Kasian 2017 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.3389/fphar.2017.00089" target="_blank" rel="noopener">Filatova 2017 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP8 ── FOXO4-DRI -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">FOXO4-DRI (Senolytic Peptide)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">Dosage Under Investigation</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">FOXO4-p53 Disruption &bull; Senescent Cell Apoptosis &bull; D-Retro-Inverso Peptide &bull; Senolytic</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A D-retro-inverso peptide engineered to disrupt the interaction between FOXO4 and p53 in senescent cells. In senescent "zombie" cells, FOXO4 sequesters p53 away from mitochondria, preventing apoptosis. FOXO4-DRI competes with endogenous FOXO4, liberating p53 to trigger selective apoptosis exclusively in senescent cells while leaving healthy cells unaffected. The D-retro-inverso modification renders the peptide protease-resistant with enhanced bioavailability.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Precise disruption of FOXO4-p53 complex <strong class="text-on-surface">selectively induces apoptosis in senescent cells</strong> while sparing non-senescent cells (EBioMedicine, 2021).</li>
+          <li>In vitro expanded human chondrocytes: FOXO4-DRI <strong class="text-on-surface">selectively removes senescent cells</strong>, improving quality of cartilage tissue for autologous chondrocyte implantation (Faust et al., 2021).</li>
+          <li>Aged mice: treatment restored fitness, fur density, and renal function by clearance of senescent cells.</li>
+          <li>Molecular modelling studies are optimizing next-generation senolytic peptides based on the FOXO4-p53 interface.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging. Strong mechanistic basis and in vitro/animal data. No human clinical trials yet. High cost and peptide delivery remain challenges.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1016/j.ebiom.2021.103693" target="_blank" rel="noopener">EBioMedicine 2021 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.3389/fbioe.2021.677576" target="_blank" rel="noopener">Faust 2021 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+    <!-- PEP9 ── CJC-1295 / Ipamorelin -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">CJC-1295 / Ipamorelin</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">100 &ndash; 300 &micro;g each / day</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">GHRH Analog &bull; Ghrelin Mimetic &bull; Pulsatile GH Release &bull; IGF-1 Elevation</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        A synergistic peptide combination. CJC-1295 is a modified growth hormone-releasing hormone (GHRH) analog with Drug Affinity Complex (DAC) technology that extends its half-life to 6&ndash;8 days. Ipamorelin is a selective growth hormone secretagogue (ghrelin mimetic) that triggers pulsatile GH release without significantly affecting cortisol or prolactin. Together, they amplify the natural GH pulse, promoting lean muscle, fat metabolism, deeper sleep, and tissue recovery.
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>CJC-1295 DAC demonstrated <strong class="text-on-surface">sustained elevation of GH and IGF-1 levels for 6&ndash;8 days</strong> after a single injection in healthy adults.</li>
+          <li>Ipamorelin is the <strong class="text-on-surface">most selective GH secretagogue known</strong>, with minimal effect on ACTH, cortisol, or prolactin compared to GHRP-6 and GHRP-2.</li>
+          <li>Combination protocols widely used in anti-aging medicine for body composition optimization, sleep quality, and recovery.</li>
+          <li>Growth hormone secretagogues are classified as prohibited substances by WADA; glycine-modified variants identified in seized preparations (Gajda et al., 2018).</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Moderate. Human pharmacokinetic data available. Long-term safety and longevity-specific RCTs lacking. WADA-prohibited in sport.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1002/dta.2489" target="_blank" rel="noopener">Gajda 2018 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <span class="text-outline uppercase tracking-widest">Rx required &bull; WADA-prohibited</span>
+      </div>
+    </article>
+
+    <!-- PEP10 ── Dihexa -->
+    <article class="journal-border pb-10 fade-in">
+      <div class="flex justify-between items-start mb-3">
+        <h3 class="text-3xl font-serif font-medium hover:text-secondary cursor-default transition-colors">Dihexa (PNB-0408)</h3>
+        <span class="font-sans text-[10px] border border-outline/40 px-3 py-1 uppercase tracking-tight whitespace-nowrap">Dosage Under Investigation</span>
+      </div>
+      <div class="font-sans text-[10px] font-bold tracking-[0.15em] uppercase text-secondary mb-3">HGF/c-Met Activation &bull; Synaptogenesis &bull; Spinogenesis &bull; Blood-Brain Barrier Permeant</div>
+      <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-5">
+        An orally active, blood-brain barrier permeant, metabolically stabilized angiotensin IV analog (N-hexanoic-Tyr-Ile-(6)-aminohexanoic amide). Dihexa activates the hepatocyte growth factor (HGF)/c-Met receptor system&mdash;a powerful mediator of synaptogenesis, neurogenesis, and neuroprotection. It stimulates hippocampal spinogenesis and the formation of new functional synaptic connections, with potential applications in Alzheimer&rsquo;s disease and cognitive decline (McCoy et al., 2013).
+      </p>
+      <div class="bg-surface-variant/50 p-5 mb-4">
+        <div class="font-sans text-[10px] font-bold tracking-widest uppercase mb-3">Key Evidence</div>
+        <ul class="space-y-2 text-sm font-serif text-on-surface-variant leading-relaxed">
+          <li>Scopolamine and aged rat models: Dihexa <strong class="text-on-surface">reversed cognitive deficits and augmented hippocampal synaptogenesis</strong> when administered orally (McCoy et al., 2013).</li>
+          <li>Demonstrated ability to <strong class="text-on-surface">induce long-term potentiation and augment memory consolidation and retrieval</strong> in animal models of Alzheimer&rsquo;s disease (Wright &amp; Harding, 2020).</li>
+          <li>Orally active with confirmed blood-brain barrier permeability&mdash;a major advantage over protein neurotrophins like NGF and BDNF which cannot cross the BBB.</li>
+          <li>Described as up to 10 million times more potent than BDNF in promoting synaptogenesis.</li>
+        </ul>
+      </div>
+      <div class="bg-[#fffcf5] p-3 mb-4">
+        <p class="text-[11px] font-serif italic text-[#7a5d1c]">Evidence Level: Emerging. Preclinical animal data only. No human clinical trials. Long-term safety profile unknown. Extremely potent&mdash;requires caution.</p>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center text-[10px] font-sans">
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.1124/jpet.112.199497" target="_blank" rel="noopener">McCoy 2013 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+        <a class="font-bold uppercase tracking-widest flex items-center gap-1 hover:text-secondary" href="https://doi.org/10.20517/2347-8659.2020.32" target="_blank" rel="noopener">Wright 2020 <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- Sidebar (peptides tab) -->
+<aside class="lg:col-span-4 space-y-12">
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">How Peptides Work</h2>
+    <div class="bg-surface-variant/50 p-6">
+      <p class="text-sm font-serif leading-relaxed text-on-surface-variant mb-4">
+        Unlike small-molecule supplements, peptides act as <span class="italic">precision signaling molecules</span> that bind specific cell-surface receptors, triggering targeted intracellular cascades.
+      </p>
+      <div class="space-y-4">
+        <div>
+          <div class="text-[10px] font-sans font-bold uppercase tracking-widest mb-1">1. Receptor Binding</div>
+          <div class="text-xs font-serif text-on-surface-variant leading-relaxed">Peptide docks with membrane receptor (GPCR, tyrosine kinase, or ion channel).</div>
+        </div>
+        <div class="w-full h-[1px] bg-outline/30"></div>
+        <div>
+          <div class="text-[10px] font-sans font-bold uppercase tracking-widest mb-1">2. Signal Transduction</div>
+          <div class="text-xs font-serif text-on-surface-variant leading-relaxed">Intracellular cascade activates (MAPK, PI3K/AKT, JAK/STAT, NF-kB modulation).</div>
+        </div>
+        <div class="w-full h-[1px] bg-outline/30"></div>
+        <div>
+          <div class="text-[10px] font-sans font-bold uppercase tracking-widest mb-1">3. Gene Expression</div>
+          <div class="text-xs font-serif text-on-surface-variant leading-relaxed">Transcription factors alter protein synthesis&mdash;growth factors, cytokines, enzymes.</div>
+        </div>
+        <div class="w-full h-[1px] bg-outline/30"></div>
+        <div>
+          <div class="text-[10px] font-sans font-bold uppercase tracking-widest mb-1">4. Biological Effect</div>
+          <div class="text-xs font-serif text-on-surface-variant leading-relaxed">Tissue repair, immune modulation, neurogenesis, or senescent cell clearance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">Peptide Categories</h2>
+    <ul class="space-y-5">
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">01</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Tissue Repair</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">BPC-157, TB-500, GHK-Cu</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">02</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Anti-Aging / Geroprotective</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Epitalon, GHK-Cu, FOXO4-DRI</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">03</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Mitochondrial</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">SS-31 (Elamipretide)</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">04</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Anti-Inflammatory</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">KPV, BPC-157</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">05</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Cognitive / Neurotropic</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">Selank, Dihexa</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-outline font-serif italic text-lg">06</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Growth Hormone</div>
+          <div class="text-xs text-on-surface-variant leading-relaxed">CJC-1295, Ipamorelin</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="font-sans text-xs font-bold uppercase tracking-widest mb-6 journal-border pb-2">Administration Routes</h2>
+    <ul class="space-y-4">
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">SC</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Subcutaneous Injection</div>
+          <div class="text-xs text-on-surface-variant">Most peptides. Highest bioavailability. BPC-157, TB-500, CJC/Ipa.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">IN</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Intranasal</div>
+          <div class="text-xs text-on-surface-variant">Optimal CNS delivery. Selank, Epitalon.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">TOP</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Topical</div>
+          <div class="text-xs text-on-surface-variant">Dermal applications. GHK-Cu.</div>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="text-secondary font-serif italic">PO</span>
+        <div>
+          <div class="text-sm font-sans font-bold uppercase tracking-tight">Oral</div>
+          <div class="text-xs text-on-surface-variant">Rare due to gastric degradation. BPC-157 (uniquely stable), Dihexa.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-6 border border-outline/20 bg-white">
+    <h4 class="font-sans text-[10px] font-bold uppercase tracking-widest mb-2">Peptide Safety Notice</h4>
+    <p class="text-[11px] font-serif italic text-on-surface-variant leading-relaxed">
+      Most therapeutic peptides are investigational compounds not yet approved by the FDA or EMA for longevity indications. Quality, purity, and sterility of research-grade peptides vary widely between suppliers. Several peptides (CJC-1295, Ipamorelin) are prohibited by WADA. Always source from reputable compounding pharmacies and consult a physician before use. This is not medical advice.
+    </p>
+  </div>
+</aside>
+</div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
 <!-- SLIDE DECK VIEWER                                               -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 <section class="mt-24 mb-16 journal-border-top pt-12" id="slides">
@@ -644,7 +1076,7 @@ tailwind.config = {
   <div class="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-secondary mb-4">Presentation</div>
   <h2 class="text-4xl font-serif font-light mb-4 italic">Longevity Supplement Slide Deck</h2>
   <p class="text-base font-serif leading-relaxed text-on-surface-variant mb-8">
-    Generated from our research sources via NotebookLM. A comprehensive overview of all 14 longevity compounds with mechanisms, clinical evidence, and dosage recommendations.
+    Generated from our research sources via NotebookLM. A comprehensive overview of longevity compounds with mechanisms, clinical evidence, and dosage recommendations.
   </p>
   <div id="slide-viewer-container" class="bg-surface-variant/50 p-1">
     <iframe src="slides.pdf" class="w-full border-0" style="height:560px;" title="The Geroscience Dossier - Longevity Supplement Slide Deck"></iframe>
@@ -697,6 +1129,7 @@ tailwind.config = {
     <h4 class="text-on-surface font-sans text-xs uppercase tracking-widest font-bold">Research</h4>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#proven-section">Proven Compounds</a>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#potential-section">High Potential</a>
+    <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#peptides-section">Peptides</a>
     <a class="text-on-surface font-sans text-xs uppercase tracking-widest hover:underline" href="#methodology">Methodology</a>
   </div>
   <div class="flex flex-col gap-3">
